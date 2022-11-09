@@ -48,9 +48,13 @@ dmesg
 ![image](result/32bit_result_2.png)  
 
 ### 64bit
-![image](result/32bit_result_1.png)  
-![image](result/32bit_result_2.png)  
+![image](result/64bit_result_1.png)  
+![image](result/64bit_result_2.png)  
 
 
 ## Demo 
 **32bit vedio link:** https://youtu.be/tE5-ElN0wXg
+**64bit vedio link:** https://youtu.be/ja0ndiG9_Wc
+
+## 實驗細節 
+Linux Operation System Project1: https://hackmd.io/9h6CSxOgRWW3CfT4xlNkyg?view
