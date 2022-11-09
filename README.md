@@ -31,11 +31,11 @@ reboot
 ### Step4. 執行multi-thread程式
 32bit
 ```
-sh run_c.sh 32bit/32bit_multi_thread_memory_layout.c
+sh run_c.sh 32bit/32bit_multi_thread_memory_layout
 ```
 64bit
 ```
-sh run_c.sh 64bit/64bit_multi_thread_memory_layout.c
+sh run_c.sh 64bit/64bit_multi_thread_memory_layout
 ```
 ### Step5. 使用dmesg查看system call執行結果
 ```
@@ -43,3 +43,14 @@ dmesg
 ```
 
 ## Result
+### 32bit
+[!image](result/32bit_result_1.png)  
+[!image](result/32bit_result_2.png)  
+
+### 64bit
+[!image](result/32bit_result_1.png)  
+[!image](result/32bit_result_2.png)  
+
+
+## Demo 
+**32bit vedio link:** https://youtu.be/tE5-ElN0wXg
