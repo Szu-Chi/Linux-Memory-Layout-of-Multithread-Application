@@ -7,6 +7,8 @@
 #include <linux/mm.h>
 #include <linux/highmem.h>
 #include <asm/pgtable.h>
+#include <asm/pgalloc.h>
+#include <asm/io.h>
 
 SYSCALL_DEFINE2(get_phy_addr, int, pid, unsigned long, vaddr){
     struct task_struct *task = NULL;
