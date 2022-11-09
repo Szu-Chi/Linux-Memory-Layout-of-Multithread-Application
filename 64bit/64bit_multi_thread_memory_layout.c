@@ -59,43 +59,43 @@ int main(int argc, char* argv[]){
 
     (void)printf("High address                                                 \n");
     (void)printf("--------------------------(args and env)---------------------\n");
-    (void)printf("environ[0] at        : 0x%012x ----> physical address = 0x%012x\n", 
+    (void)printf("environ[0] at        : 0x%012lx ----> physical address = 0x%012lx\n", 
                 (unsigned long)environ, (unsigned long)get_phy_addr_syscall(pid, &environ));
 
     (void)printf("-----------------------------Stack---------------------------\n");
-    (void)printf("main_var             : 0x%012x ----> physical address = 0x%012x\n", 
+    (void)printf("main_var             : 0x%012lx ----> physical address = 0x%012lx\n", 
                 (unsigned long)&main_var, (unsigned long)get_phy_addr_syscall(pid, &main_var));
-    (void)printf("main_array           : 0x%012x ----> physical address = 0x%012x\n", 
+    (void)printf("main_array           : 0x%012lx ----> physical address = 0x%012lx\n", 
                 (unsigned long)&main_array, (unsigned long)get_phy_addr_syscall(pid, &main_array));
-    (void)printf("main_var_with_init   : 0x%012x ----> physical address = 0x%012x\n", 
+    (void)printf("main_var_with_init   : 0x%012lx ----> physical address = 0x%012lx\n", 
                 (unsigned long)&main_var_with_init, (unsigned long)get_phy_addr_syscall(pid, &main_var_with_init));
 
     (void)printf("-----------------------------Lib-----------------------------\n");
-    (void)printf("printf library func  : 0x%012x ----> physical address = 0x%012x\n", 
+    (void)printf("printf library func  : 0x%012lx ----> physical address = 0x%012lx\n", 
                 (unsigned long)&printf, (unsigned long)get_phy_addr_syscall(pid, &printf));
-    (void)printf("malloc library func  : 0x%012x ----> physical address = 0x%012x\n", 
+    (void)printf("malloc library func  : 0x%012lx ----> physical address = 0x%012lx\n", 
                 (unsigned long)&malloc, (unsigned long)get_phy_addr_syscall(pid, &malloc));
 
     (void)printf("-----------------------------HEAP----------------------------\n");
-    (void)printf("main_malloc_end      : 0x%012x ----> physical address = 0x%012x\n", 
+    (void)printf("main_malloc_end      : 0x%012lx ----> physical address = 0x%012lx\n", 
                 (unsigned long)main_ptr+MALLOC_SIZE, (unsigned long)get_phy_addr_syscall(pid, main_ptr+MALLOC_SIZE));
-    (void)printf("main_malloc_start    : 0x%012x ----> physical address = 0x%012x\n", 
+    (void)printf("main_malloc_start    : 0x%012lx ----> physical address = 0x%012lx\n", 
                 (unsigned long)main_ptr, (unsigned long)get_phy_addr_syscall(pid, main_ptr));
 
     (void)printf("-----------------------------BSS-----------------------------\n");
-    (void)printf("global_array         : 0x%012x ----> physical address = 0x%012x\n", 
+    (void)printf("global_array         : 0x%012lx ----> physical address = 0x%012lx\n", 
                 (unsigned long)global_array, (unsigned long)get_phy_addr_syscall(pid, global_array));
-    (void)printf("global_var           : 0x%012x ----> physical address = 0x%012x\n", 
+    (void)printf("global_var           : 0x%012lx ----> physical address = 0x%012lx\n", 
                 (unsigned long)&global_var, (unsigned long)get_phy_addr_syscall(pid, &global_var));
 
     (void)printf("-----------------------------Data----------------------------\n");
-    (void)printf("global_var_with_init : 0x%012x ----> physical address = 0x%012x\n", 
+    (void)printf("global_var_with_init : 0x%012lx ----> physical address = 0x%012lx\n", 
                 (unsigned long)&global_var_with_init, (unsigned long)get_phy_addr_syscall(pid, &global_var_with_init));
 
     (void)printf("-----------------------------Text----------------------------\n");
-    (void)printf("thread_func          : 0x%012x ----> physical address = 0x%012x\n", 
+    (void)printf("thread_func          : 0x%012lx ----> physical address = 0x%012lx\n", 
                 (unsigned long)&thread_func, (unsigned long)get_phy_addr_syscall(pid, &thread_func));
-    (void)printf("main_func            : 0x%012x ----> physical address = 0x%012x\n", 
+    (void)printf("main_func            : 0x%012lx ----> physical address = 0x%012lx\n", 
                 (unsigned long)&main, (unsigned long)get_phy_addr_syscall(pid, &main));
 
     pthread_attr_t attr;
@@ -155,39 +155,39 @@ void *thread_func(void* data){
 
     (void)printf("High address                                                 \n");
     (void)printf("--------------------------(args and env)---------------------\n");
-    (void)printf("environ[0] at        : 0x%012x ----> physical address = 0x%012x\n", 
+    (void)printf("environ[0] at        : 0x%012lx ----> physical address = 0x%012lx\n", 
                 (unsigned long)environ, (unsigned long)get_phy_addr_syscall(pid, environ));
 
     (void)printf("-----------------------------Stack---------------------------\n");
-    (void)printf("func_var             : 0x%012x ----> physical address = 0x%012x\n", 
+    (void)printf("func_var             : 0x%012lx ----> physical address = 0x%012lx\n", 
                 (unsigned long)&func_var, (unsigned long)get_phy_addr_syscall(pid, &func_var));
 
     (void)printf("-----------------------------Lib-----------------------------\n");
-    (void)printf("printf library func  : 0x%012x ----> physical address = 0x%012x\n", 
+    (void)printf("printf library func  : 0x%012lx ----> physical address = 0x%012lx\n", 
                 (unsigned long)&printf, (unsigned long)get_phy_addr_syscall(pid, &printf));
-    (void)printf("malloc library func  : 0x%012x ----> physical address = 0x%012x\n", 
+    (void)printf("malloc library func  : 0x%012lx ----> physical address = 0x%012lx\n", 
                 (unsigned long)&malloc, (unsigned long)get_phy_addr_syscall(pid, &malloc));
 
     (void)printf("-----------------------------HEAP----------------------------\n");
-    (void)printf("thread_malloc_end    : 0x%012x ----> physical address = 0x%012x\n", 
+    (void)printf("thread_malloc_end    : 0x%012lx ----> physical address = 0x%012lx\n", 
                 (unsigned long)pack->malloc_ptr+MALLOC_SIZE, (unsigned long)get_phy_addr_syscall(pid, pack->malloc_ptr+MALLOC_SIZE));
-    (void)printf("thread_malloc_start  : 0x%012x ----> physical address = 0x%012x\n", 
+    (void)printf("thread_malloc_start  : 0x%012lx ----> physical address = 0x%012lx\n", 
                 (unsigned long)pack->malloc_ptr, (unsigned long)get_phy_addr_syscall(pid, pack->malloc_ptr));
 
     (void)printf("-----------------------------BSS-----------------------------\n");
-    (void)printf("global_array         : 0x%012x ----> physical address = 0x%012x\n", 
+    (void)printf("global_array         : 0x%012lx ----> physical address = 0x%012lx\n", 
                 (unsigned long)global_array, (unsigned long)get_phy_addr_syscall(pid, global_array));
-    (void)printf("global_var           : 0x%012x ----> physical address = 0x%012x\n", 
+    (void)printf("global_var           : 0x%012lx ----> physical address = 0x%012lx\n", 
                 (unsigned long)&global_var, (unsigned long)get_phy_addr_syscall(pid, &global_var));
 
     (void)printf("-----------------------------Data----------------------------\n");
-    (void)printf("global_var_with_init : 0x%012x ----> physical address = 0x%012x\n", 
+    (void)printf("global_var_with_init : 0x%012lx ----> physical address = 0x%012lx\n", 
                 (unsigned long)&global_var_with_init, (unsigned long)get_phy_addr_syscall(pid, &global_var_with_init));
 
     (void)printf("-----------------------------Text----------------------------\n");
-    (void)printf("thread_func          : 0x%012x ----> physical address = 0x%012x\n", 
+    (void)printf("thread_func          : 0x%012lx ----> physical address = 0x%012lx\n", 
                 (unsigned long)&thread_func, (unsigned long)get_phy_addr_syscall(pid, &thread_func));
-    (void)printf("main_func            : 0x%012x ----> physical address = 0x%012x\n", 
+    (void)printf("main_func            : 0x%012lx ----> physical address = 0x%012lx\n", 
                 (unsigned long)&main, (unsigned long)get_phy_addr_syscall(pid, &main));
     pthread_mutex_unlock(&mutex1);
 }
