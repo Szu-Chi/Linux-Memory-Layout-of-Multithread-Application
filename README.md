@@ -53,7 +53,7 @@ dmesg
 
 
 ## Demo 
-**32bit vedio link:** https://youtu.be/tE5-ElN0wXg
+**32bit vedio link:** https://youtu.be/tE5-ElN0wXg  
 **64bit vedio link:** https://youtu.be/ja0ndiG9_Wc
 
 ## 實驗細節 
