@@ -44,12 +44,12 @@ dmesg
 
 ## Result
 ### 32bit
-[!image](result/32bit_result_1.png)  
-[!image](result/32bit_result_2.png)  
+![image](result/32bit_result_1.png)  
+![image](result/32bit_result_2.png)  
 
 ### 64bit
-[!image](result/32bit_result_1.png)  
-[!image](result/32bit_result_2.png)  
+![image](result/32bit_result_1.png)  
+![image](result/32bit_result_2.png)  
 
 
 ## Demo 
